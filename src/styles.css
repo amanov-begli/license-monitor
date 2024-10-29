@@ -1,0 +1,486 @@
+/*
+  ========================================
+  CSS Resets for more control over styling
+  ========================================
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* imports for primeNG UI library */
+
+/*
+  ========================================
+  Variables
+  ========================================
+*/
+
+:root {
+    --text-color: #495057;
+    --text-color-secondary: #6c757d;
+    --primary-color: #3b82f6;
+    --primary-color-text: #fff;
+    background-color: #eff3f8;
+    /* --font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol; */
+    --surface-900: #212121;
+    --blue-500: #3b82f6;
+    --blue-600: #2063cf;
+    --blue-700: #6189ca;
+    --content-padding: 1.25rem;
+    --inline-spacing: .5rem;
+    --border-radius: .375rem;
+    color-scheme: light;
+
+    overflow-y: scroll;
+}
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin-top: .375rem;
+    margin-bottom: 1.375rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--surface-900);
+}
+
+h1 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 2.75rem;
+}
+
+h3 {
+    font-size: 1.3125rem;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+/*
+  ========================================
+  Custom Styles
+  ========================================
+*/
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.container {
+    padding: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.element {
+    width: 100%;
+    border-radius: .375rem;
+    padding: .75rem;
+}
+
+.content {
+    margin: 11rem auto;
+    background-color: #fff;
+    border-radius: .375rem;
+    padding: 1.5rem;
+    box-shadow: 0 .25rem .625rem #00000008, 0 0 .125rem #0000000f,
+        0 .125rem .375rem #0000001f;
+}
+
+/* it is right now only for login form
+!Better idea for the class name? 
+*/
+.window {
+    width: 28rem;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+::placeholder {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.padding-box {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.margin-bottom {
+    margin-bottom: 1.5rem;
+}
+
+.flex-1-3 {
+    flex: 1;
+}
+
+.flex-2-3 {
+    flex: 2;
+}
+
+.relative {
+    position: relative;
+}
+
+/*
+  ========================================
+  Components
+  ========================================
+*/
+
+/*
+  Input
+*/
+
+input {
+    border: .0938rem solid #ced4da;
+    color: #495057;
+    font-size: 1rem;
+}
+
+/*
+  Label
+*/
+
+label {
+    margin-bottom: .5rem;
+    display: block;
+    color: var(--surface-900);
+}
+
+.btn-label {
+    /* some ugly solution to center the button label */
+    margin-left: 38%;
+
+    /* here is another way how to center the label on the button. but for now I don't know why and how it works 
+    flex: 1 1 auto; 
+    */
+}
+
+/*
+  Checkbox
+*/
+
+.checkbox {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: 0 .5rem 0 0;
+    cursor: pointer;
+    /* cannot apply border properties on the check box for now. tbd. 
+    border: .125rem solid #ced4da;
+    border-radius: .375rem; 
+    */
+}
+
+/* Links */
+
+a {
+    cursor: pointer;
+    color: var(--blue-500);
+    text-decoration: none;
+}
+
+/* Buttons */
+
+button {
+    background-color: var(--blue-500);
+    color: #fff;
+    font-size: 1em;
+    border: 0;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+button:hover {
+    background-color: var(--blue-600);
+}
+
+button:active {
+    background-color: var(--blue-700);
+}
+
+/* Icons */
+
+.icon {
+    margin-right: .5rem;
+}
+
+/* Footer */
+
+footer {
+    position: fixed;
+    color: #979997;
+    bottom: 0;
+    margin: 1.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+/* aside, angular component name used as css selector */
+
+app-aside {
+    background-color: #42444d;
+    min-height: 100vh;
+}
+
+/* Images  */
+
+img {
+    width: 2.5rem;
+    height: 3.125rem;
+}
+
+/*
+  ========================================
+  Login Page Only styles
+  ========================================
+*/
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 .0313rem #bdc4ca;
+    border-color: #bdc4ca;
+    outline-offset: 0;
+}
+
+/*
+  ========================================
+  Main Page only Styles
+  ========================================
+*/
+
+.aside-header {
+    font-size: 2.5rem;
+    line-height: 2.1rem;
+    margin-top: 2.2rem;
+    margin-bottom: 2.2rem;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.header-link {
+    color: #fff;
+}
+
+.aside-link {
+    color: #fff;
+}
+
+.aside-link:hover {
+    color: #3b82f6;
+}
+
+/* table styles only */
+
+thead {
+    text-transform: uppercase;
+}
+
+td {
+    padding: .5rem .9375rem;
+    vertical-align: middle;
+    border: .0625rem solid #dee2e6;
+}
+
+/* we override primeng library class rules */
+.p-tag {
+    padding: .3rem;
+    border-radius: 0;
+}
+
+.p-datatable-thead th {
+    padding: 1rem;
+    border: .0625rem solid #dee2e6;
+}
+
+.p-inputtext {
+    /* --font-family primeng variable  */
+    font-family: var(--font-family);
+    font-size: 1rem;
+    color: #495057;
+    padding: .65rem;
+    border: .0625rem solid #ced4da;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    border-radius: .375rem;
+}

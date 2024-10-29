@@ -1,0 +1,57 @@
+<form class="content container window">
+  <div class="text-center">
+    <!-- this image will not be displayed if put this path: src="/src/assets/Acc_GT_Dimensional_RGB.svg"
+    <img src="assets/Acc_GT_Dimensional_RGB.svg" alt="" /> -->
+  </div>
+  <h2 class="text-center bold">Sing In</h2>
+
+  <fieldset class="account-info">
+    <label for="username" class="bold">Username</label>
+
+    <!-- spans are for future icons implementations -->
+    <!-- <span class="pi pi-user icons"></span> -->
+    <input
+      type="text"
+      name="username"
+      id="username"
+      placeholder="Username"
+      class="element margin-bottom"
+    />
+
+    <label for="password" class="bold">Password</label>
+    <!-- spans are for future icons implementations -->
+    <!-- <span class="pi pi-eye icons"></span> -->
+    <input
+      type="password"
+      name="password"
+      id="password"
+      placeholder="Password"
+      class="element margin-bottom"
+    />
+  </fieldset>
+
+  <!-- TODO
+  *1. Check box does get the styles we wish.
+  *2. Add some Icons - resolved
+  *3. Remove border on button :focus - resolved
+  TODO -->
+
+  <fieldset class="flex space-between margin-bottom">
+    <div class="flex align-items-center">
+      <input type="checkbox" name="" id="" class="checkbox" />
+      <label for="" class="no-margin bold">Remember me</label>
+    </div>
+
+    <a href="#">Forgot password?</a>
+  </fieldset>
+  <button
+    type="button"
+    class="element bold flex align-items-center"
+    routerLink="/main"
+  >
+    <span class="icon pi pi-user"></span>
+    <span class="btn-label">Sing In</span>
+  </button>
+</form>
+
+<footer>Accenture 2023</footer>
